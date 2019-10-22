@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/iconfont.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <!-- es6转义 -->
+  <script src="./js/browser.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="./js/jquery-1.5.js"></script> -->
+
+  <!-- <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script> -->
+  <!-- 引用jqzoom：放大镜 -->
+  <script type="text/javascript" src="./js/jquery.jqzoom.js"></script>
+  <link rel="stylesheet" href="./css/jquery.jqzoom.css">
+  <style type"text/css"> body{margin:0px;padding:0px;font-family:Arial;} a img,:link img,:visited img { border: none;
+  } table { border-collapse: collapse; border-spacing: 0; } :focus { outline: none; } *{margin:0;padding:0;} p,
+  blockquote, dd, dt{margin:0 0 8px 0;line-height:1.5em;} fieldset
+  {padding:0px;padding-left:7px;padding-right:7px;padding-bottom:7px;} fieldset
+  legend{margin-left:15px;padding-left:3px;padding-right:3px;color:#333;} dl dd{margin:0px;} dl dt{}
+  .clearfix:after{clear:both;content:".";display:block;font-size:0;height:0;line-height:0;visibility:hidden;}
+  .clearfix{display:block;zoom:1} ul#thumblist{display:block;} ul#thumblist
+  li{float:left;margin-right:2px;list-style:none;} ul#thumblist li a{display:block;border:1px solid #CCC;}
+  ul#thumblist li a.zoomThumbActive{ border:1px solid red; } .jqzoom{ text-decoration:none; float:left; } </style>
+  <script>
+    $(document).ready(function () {
+      $('.jqzoom').jqzoom({
+        zoomType: 'standard',
+        lens: true,
+        preloadImages: false,
+        alwaysOn: false
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- 公共头部 -->
+
+  <div class="shopping_header">
+    <div class="header_wrap">
+      <div class="logo">
+        <img src="./images/logo.gif" alt="logo" class="logo_img">
+        <div class="search_input">
+          <input type="text" placeholder="请搜索...">
+        </div>
+
+        <ul class="theme_color_checkbox">
+          <!-- <li>
+            <label for="color_input_1" class="color_label color_label_1 icondagou iconfont"></label>
+            <input type="radio" id="color_input_1" name="color_input_1" value="red">
+          </li> -->
+          <li class="color_label color_label_1 icondagou iconfont">
+
+          </li>
+          <li class="color_label color_label_2 iconfont">
+
+          </li>
+          <li class="color_label color_label_3 iconfont">
+
+          </li>
+          <li class="color_label color_label_4 iconfont">
+
+          </li>
+          <li class="color_label color_label_5 iconfont">
+
+          </li>
+          <li class="color_label color_label_6 iconfont">
+
+          </li>
+
+        </ul>
+      </div>
+      <div class="nav">
+        <ul>
+          <li class="nav_title">
+            <a href="javascript:void(0)" class="appendHoverDiv">首页</a>
+            <div class="append_hover_item">
+              旺季即将1
+            </div>
+          </li>
+          <li class="nav_title">
+            <a href="javascript:void(0)">品牌</a>
+            <div class="append_hover_item">
+              旺季即将2
+            </div>
+          </li>
+          <li class="nav_title">
+            <a href="javascript:void(0)">女装</a>
+            <div class="append_hover_item">
+              旺季即将3
+            </div>
+          </li>
+          <li class="nav_title">
+            <a href="javascript:void(0)">男装</a>
+            <div class="append_hover_item">
+              旺季即将4
+            </div>
+          </li>
+          <li class="nav_title">
+            <a href="javascript:void(0)">鞋包配饰</a>
+            <div class="append_hover_item">
+              旺季即将5
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+  </div>
+  <div id="main">
+    <!-- 内容区域 -->
+    <div class="shopping_center">
+      <div class="center_left">
+        <p class="good_title">商品分类</p>
+        <div class="good_wrap" id="good_sort_wrap">
+
+
+        </div>
+
+      </div>
+      <div class="center_right detail_center">
+        <div class="good_show_wrap">
+          <div class="good_img_show">
+            <div class="good_show_big">
+              <div class="clearfix">
+
+                <a href="./images/pro_img/blue_one_big.jpg" class="jqzoom" rel='gal1' title="triumph">
+                  <img src="./images/pro_img/blue_one_small.jpg" title="triumph" style="border: 4px solid #666;">
+                </a>
+              </div>
+
+            </div>
+            <p class="look_big_img"><a href="javascript:void(0)"><img src="./images/look.gif" alt="点击查看大图" /></a></p>
+            <ul class="three_good_img clearfix" id="thumblist">
+              <li><a  href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './images/pro_img/blue_one_small.jpg',largeimage: './images/pro_img/blue_one_big.jpg'}"><img src="./images/pro_img/blue_one.jpg" /></a></li>
+              <li><a  href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './images/pro_img/blue_three_small.jpg',largeimage: './images/pro_img/blue_three_big.jpg'}"><img src="./images/pro_img/blue_three.jpg" /></a></li>
+              <li><a  href='javascript:void(0);' rel="{gallery: 'gal1', smallimage: './images/pro_img/blue_two_small.jpg',largeimage: './images/pro_img/blue_two_big.jpg'}"><img src="./images/pro_img/blue_two.jpg" /></a></li>
+            </ul>
+          </div>
+          <div class="goods_tabs_show">
+            <ul class="goods_tabs_title">
+              <li class="active">产品属性</li>
+              <li>产品尺码表</li>
+              <li>产品介绍</li>
+            </ul>
+            <ul class="goods_tabs_box">
+              <li class="active">沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性能更上一层。延续简约、舒适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。
+              </li>
+              <li>
+                来自新疆无污染的生态棉花，采用紧密纺精梳棉纱，单经双纬的织造组织，造就了颗粒饱满、朴实无华、温润细腻的经典牛津纺，易洗快干、手感丰软、吸湿性好。设计师遵循布料完美肌理，立体剪裁，曲摆的现代人性化裁减，相得益彰，浑然天成。
+              </li>
+              <li>
+                世界权威德国科德宝的衬和英国高士缝纫线使成衣领型自然舒展、永不变形，缝线部位平服工整、牢固耐磨；人性化的4片式后背打褶结构设计提供更舒适的活动空间；领尖扣的领型设计戴或不戴领带风格炯同、瞬间呈现；醇正天然设计，只为彰显自然荣耀。
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="good_detail_wrap">
+          <h3>免烫高支棉条纹衬衣</h3>
+          <p class="type">全新精品高支棉衬衫再次提升品质，精选100%新疆长绒棉织造而成，平整度好，短绒少；
+            80-100高支双股经纬交织，带来无与伦比的舒适享受；而且面料反光效果好，具有漂亮的光泽，质感上佳，有利于免烫效果的维持！</p>
+          <p class="type"><span>价　　格:</span><span class="old_price"> 379.00</span>元</p>
+          <p class="type type_price"><span>促　　销：</span><span class="new_price"> 200.00</span>元</p>
+          <p class="type"><span>颜　　色：</span><span class="color">蓝白</span>
+            <ul class="color_change">
+              <li><img src="./images/pro_img/blue.jpg" alt="蓝白" /></li>
+              <li><img src="./images/pro_img/yellow.jpg" alt="黄白" /></li>
+              <li><img src="./images/pro_img/green.jpg" alt="粉绿" /></li>
+            </ul>
+          </p>
+          <p class="type"><span>尺　　寸:</span><span class="size">未选择</span>
+            <ul class="size_change">
+              <li>S</li>
+              <li>L</li>
+              <li>SL</li>
+              <li>LL</li>
+            </ul>
+          </p>
+          <p class="type">
+            <span>数　　量：</span>
+            <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </p>
+          <p class="type">
+            <span>总　　计：</span><span class="type_sum_price">200</span>元
+          </p>
+          <p class="type">给商品评分：
+            <ul class="start">
+              <li class="iconstart iconfont"></li>
+              <li class="iconstart iconfont"></li>
+              <li class="iconstart iconfont"></li>
+              <li class="iconstart iconfont"></li>
+              <li class="iconstart iconfont"></li>
+            </ul>
+          </p>
+          <div class="buy_car">
+            <img src="./images/btn_cart.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear_both"></div>
+
+    <!-- 页脚 -->
+    <div class="shopping_footer">
+      <a href="javascript:void(0)">Copyright @ 2009-2012 JanShop Inc.
+      </a>
+    </div>
+
+  </div>
+  <div class="modal">
+    <div class="modal_wrap">
+      <p class="modal_wrap_content"></p>
+      <div class="close_btn">关闭</div>
+      <div>
+      </div>
+
+</body>
+
+<!-- 换衣服图片 -->
+<script src="./js/swithColor.js"></script>
+<script src="./js/index.js" type="text/babel"></script>
+<script src="./js/details.js" type="text/babel"></script>
+<script type="text/javascript">
+
+
+
+
+</script>
+<script type="text/babel">
+
+
+  const goodConfig = [{
+    id: 1,
+    goodTitle: '推荐品牌',
+    goodList: [{
+      name: '耐克1',
+      isHot: 0,
+    }, {
+      name: '阿迪达斯',
+      isHot: 1,
+    }, {
+      name: '达芙妮',
+      isHot: 0,
+    }, {
+      name: '李宁',
+      isHot: 0,
+    }, {
+      name: '安踏',
+      isHot: 0,
+    }, {
+      name: '奥康',
+      isHot: 0,
+    }, {
+      name: '骆驼',
+      isHot: 1,
+    }, {
+      name: '特步',
+      isHot: 0,
+    }]
+  }, {
+    id: 2,
+    goodTitle: '女装',
+    goodList: [{
+      name: '耐克2',
+      isHot: 0,
+    }, {
+      name: '阿迪达斯',
+      isHot: 0,
+    }, {
+      name: '达芙妮',
+      isHot: 0,
+    }, {
+      name: '李宁',
+      isHot: 0,
+    }, {
+      name: '安踏',
+      isHot: 0,
+    }, {
+      name: '奥康',
+      isHot: 0,
+    }, {
+      name: '骆驼',
+      isHot: 0,
+    }, {
+      name: '特步',
+      isHot: 0,
+    }]
+  }, {
+    id: 3,
+    goodTitle: '男装',
+    goodList: [{
+      name: '耐克3',
+      isHot: 0,
+    }, {
+      name: '阿迪达斯',
+      isHot: 0,
+    }, {
+      name: '达芙妮',
+      isHot: 0,
+    }, {
+      name: '李宁',
+      isHot: 0,
+    }, {
+      name: '安踏',
+      isHot: 0,
+    }, {
+      name: '奥康',
+      isHot: 0,
+    }, {
+      name: '骆驼',
+      isHot: 0,
+    }, {
+      name: '特步',
+      isHot: 0,
+    }]
+  }, {
+    id: 4,
+    goodTitle: '鞋包配饰',
+    goodList: [{
+      name: '耐克4',
+      isHot: 0,
+    }, {
+      name: '阿迪达斯',
+      isHot: 0,
+    }, {
+      name: '达芙妮',
+      isHot: 0,
+    }, {
+      name: '李宁',
+      isHot: 0,
+    }, {
+      name: '安踏',
+      isHot: 0,
+    }, {
+      name: '奥康',
+      isHot: 0,
+    }, {
+      name: '骆驼',
+      isHot: 0,
+    }, {
+      name: '特步',
+      isHot: 0,
+    }]
+  }]
+  var goodList = [];
+  var goodUlList = [];
+  // 第一层
+  for (let i = 0; i < goodConfig.length; i++) {
+    goodList[i] = ' <div class="good_item"><p class="good_item_title">' + goodConfig[i].goodTitle + '</p><ul class="good_item_content good_sort_wrap_"' + i + '+>' +
+      goodListUl(goodConfig[i].goodList) + '</ul></div>';
+  }
+  //第二层
+  function goodListUl(goodList) {
+    for (let j = 0; j < goodList.length; j++) {
+      if (goodList[j].isHot) {
+        goodUlList[j] = ' <li class="good_is_hot"> ' + goodList[j].name + ' </li>';
+      } else {
+        goodUlList[j] = ' <li> ' + goodList[j].name + ' </li>';
+      }
+
+    }
+    return goodUlList.join('');
+  }
+  goodList = goodList.join('');
+  var good_sort_wrap = document.getElementById('good_sort_wrap');
+  good_sort_wrap.innerHTML = goodList;
+
+</script>
+
+</html>
